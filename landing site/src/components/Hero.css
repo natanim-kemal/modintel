@@ -1,0 +1,134 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(var(--nav-height) + 60px);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Glow effect behind visual */
+.hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-glow);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    /* 64px */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero p.subtitle {
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    /* 18px */
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.btn-hero {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+    background: var(--gradient-main);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(255, 87, 10, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 87, 10, 0.4);
+}
+
+.btn-hero-secondary {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Visual Mockup Placeholder (Code/Dashboard) */
+.hero-visual {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    /* Placeholder height */
+    background: #0b0a10;
+    /* Darker editor bg */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+
+    /* Mock UI elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-mockup {
+    font-family: var(--font-mono);
+    color: #a9b7c6;
+    text-align: left;
+    padding: 40px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background-color: var(--primary-orange);
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
