@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import { FaGithub, FaTwitter, FaLinkedin, FaDiscord } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
@@ -49,7 +50,7 @@ const Footer = () => {
                     <p>&copy; {new Date().getFullYear()} ModIntel. All rights reserved.</p>
                     <div className="social-links">
                         <a href="#"><FaGithub size={20} /></a>
-                        <a href="#"><FaTwitter size={20} /></a>
+                        <a href="#"><FaXTwitter size={20} /></a>
                         <a href="#"><FaLinkedin size={20} /></a>
                         <a href="#"><FaDiscord size={20} /></a>
                     </div>
