@@ -1,4 +1,5 @@
 import React from 'react';
+import RequestFlow from './RequestFlow';
 import './Hero.css';
 
 const Hero = () => {
@@ -24,14 +25,7 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-visual">
-                    <div className="code-mockup">
-                        <p><span style={{ color: '#cc7832' }}>def</span> <span style={{ color: '#ffc66d' }}>analyze_request</span>(req):</p>
-                        <p>&nbsp;&nbsp;confidence = model.predict(req.payload)</p>
-                        <p>&nbsp;&nbsp;<span style={{ color: '#cc7832' }}>if</span> confidence {'>'} <span style={{ color: '#6897bb' }}>0.95</span>:</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;review.queue(req.id)</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span style={{ color: '#808080' }}># flagged for a human, never auto-blocked</span></p>
-                        <p>&nbsp;&nbsp;<span style={{ color: '#cc7832' }}>return</span> True <span className="cursor"></span></p>
-                    </div>
+                    <RequestFlow />
                 </div>
             </div>
         </section>
