@@ -23,6 +23,11 @@
   --nav-height: 80px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
