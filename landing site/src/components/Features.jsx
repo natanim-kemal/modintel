@@ -17,11 +17,7 @@ const Features = () => {
                         <div className="card-glow"></div>
                         <div className="card-icon"><FaShieldAlt /></div>
                         <h3>Adaptive Threat Detection</h3>
-                        <p>
-                            Unlike static signature-based WAFs, ModIntel learns from traffic patterns in real-time.
-                            Our ML models adapt to new attack vectors instantly, drastically reducing false positives
-                            while catching sophisticated zero-day payloads.
-                        </p>
+                        <p>Signature WAFs fire on patterns, not intent. ModIntel scores each request with a model trained on WAF audit data, so benign traffic that trips a rule can be cleared while missed variants still reach a reviewer.</p>
                     </div>
 
                     {/* Feature 2: Analytics (Moved here, Span 1) */}
@@ -29,7 +25,7 @@ const Features = () => {
                         <div className="card-icon"><FaChartLine /></div>
                         <h3>Visual Analytics</h3>
                         <p>
-                            See the attacks you blocked. Our real-time dashboard visualizes traffic anomalies and threat actors.
+                            See the attacks you stopped. Every alert, its triggered rules, and the model's score land in one dashboard.
                         </p>
                     </div>
 
@@ -44,12 +40,12 @@ const Features = () => {
 
                     {/* Feature 4: Integration (Span 2) */}
                     <div className="bento-card span-2">
-                        <div className="card-glow" style={{ left: 0, right: 'auto', background: 'radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%)' }}></div>
+                        <div className="card-glow" style={{ left: 0, right: 'auto', background: 'radial-gradient(circle, rgba(255, 87, 10, 0.2) 0%, transparent 70%)' }}></div>
                         <div className="card-icon"><FaCode /></div>
-                        <h3>Seamless ModSecurity Drop-in</h3>
+                        <h3>Drop-in Reverse Proxy</h3>
                         <p>
-                            Already using ModSecurity? Perfect. ModIntel plugs directly into your existing CRS pipeline
-                            as an auxiliary inspection connector. No need to rewrite your entire infrastructure.
+                            ModIntel sits in front of your existing stack and mirrors each request to the ML service.
+                            Your application and rule set stay as they are.
                         </p>
                     </div>
                 </div>
