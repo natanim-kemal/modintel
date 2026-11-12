@@ -21,7 +21,7 @@
     transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 87, 10, 0.2) 0%, transparent 70%);
     filter: blur(60px);
     z-index: -1;
     pointer-events: none;
@@ -59,7 +59,7 @@
         align-items: center;
     }
     
-    .cta-buttons button {
+    .cta-buttons a {
         width: 100%;
         max-width: 250px;
     }
