@@ -7,22 +7,22 @@ const HowItWorks = () => {
         {
             icon: <FaServer />,
             title: "Traffic Ingestion",
-            desc: "ModSecurity intercepts incoming web requests at the ingress layer. No changes to your DNS required."
+            desc: "Coraza intercepts incoming web requests at the ingress layer. No changes to your DNS required."
         },
         {
             icon: <FaBrain />,
             title: "Parallel Analysis",
-            desc: "Request payloads are asynchronously sent to ModIntel's local ML engine for deep-learning inspection in under 5ms."
+            desc: "A copy of each request goes to ModIntel's local ML service for scoring, next to the WAF decision."
         },
         {
             icon: <FaFilter />,
             title: "Smart Decision",
-            desc: "The model distinguishes between true attacks and benign anomalies, reducing false positives by up to 66%."
+            desc: "The model separates true attacks from benign anomalies, so rule hits that are harmless can be cleared."
         },
         {
             icon: <FaChartPie />,
             title: "Visual Triage",
-            desc: "Admins receive real-time alerts in a visual dashboard, replacing tedious log file analysis."
+            desc: "Alerts land in a review dashboard with the payload, the rules that fired, and the model's score."
         }
     ];
 
