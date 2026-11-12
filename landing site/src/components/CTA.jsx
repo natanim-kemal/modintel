@@ -9,11 +9,11 @@ const CTA = () => {
                     <div className="cta-glow"></div>
                     <h2>Ready to Secure Your Infrastructure?</h2>
                     <p>
-                        Reduce false positives and gain real-time visibility into your threats today.
+                        Reduce false positives and see every alert in one place.
                     </p>
                     <div className="cta-buttons">
-                        <button className="btn-hero">Get Started Now</button>
-                        <button className="btn-hero-secondary">Contact Sales</button>
+                        <a href="https://github.com/modintel/modintel" className="btn-hero" target="_blank" rel="noreferrer">Get Started Now</a>
+                        <a href="https://natanim.dev/blog" className="btn-hero-secondary" target="_blank" rel="noreferrer">Read the Docs</a>
                     </div>
                 </div>
             </div>
