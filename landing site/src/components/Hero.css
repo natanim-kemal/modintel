@@ -95,47 +95,11 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Visual Mockup Placeholder (Code/Dashboard) */
 .hero-visual {
-    width: 100%;
-    max-width: 1200px;
-    height: 400px;
-    /* Placeholder height */
-    background: #0b0a10;
-    /* Darker editor bg */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
+    width: min(1200px, calc(100vw - 48px));
+    max-width: none;
     margin-top: 20px;
-
-    /* Mock UI elements */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.code-mockup {
-    font-family: var(--font-mono);
-    color: #a9b7c6;
+    margin-left: 50%;
+    transform: translateX(-50%);
     text-align: left;
-    padding: 40px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.cursor {
-    display: inline-block;
-    width: 8px;
-    height: 18px;
-    background-color: var(--primary-orange);
-    animation: blink 1s step-end infinite;
-    vertical-align: middle;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
 }
