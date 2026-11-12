@@ -1,7 +1,10 @@
 import React from 'react';
 import './Footer.css';
-import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa';
+
+const repoUrl = 'https://github.com/modintel/modintel';
+const blogUrl = 'https://natanim.dev/blog';
+const sponsorUrl = 'https://github.com/sponsors/modintel';
 
 const Footer = () => {
     return (
@@ -11,37 +14,38 @@ const Footer = () => {
                     <div className="footer-brand">
                         <h3>Mod<span>Intel</span></h3>
                         <p>
-                            Next-generation WAF intelligence that adapts to threats in real-time, reducing false positives and simplifying triage.
+                            An open-source hybrid WAF: Coraza and the OWASP Core Rule Set detect,
+                            a machine learning model judges, and analysts review the edge cases.
                         </p>
                     </div>
 
                     <div className="footer-col">
                         <h4>Product</h4>
                         <ul className="footer-links">
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Integrations</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Changelog</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How it Works</a></li>
+                            <li><a href={repoUrl} target="_blank" rel="noreferrer">GitHub</a></li>
+                            <li><a href={sponsorUrl} target="_blank" rel="noreferrer">Sponsor</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-col">
                         <h4>Resources</h4>
                         <ul className="footer-links">
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">API Reference</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Community</a></li>
+                            <li><a href={blogUrl} target="_blank" rel="noreferrer">Documentation</a></li>
+                            <li><a href={blogUrl} target="_blank" rel="noreferrer">Blog</a></li>
+                            <li><a href={`${repoUrl}/tree/main/dashboard`} target="_blank" rel="noreferrer">Dashboard</a></li>
+                            <li><a href={`${repoUrl}/tree/main/ml-pipeline`} target="_blank" rel="noreferrer">ML Pipeline</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-col">
-                        <h4>Company</h4>
+                        <h4>Project</h4>
                         <ul className="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href={repoUrl} target="_blank" rel="noreferrer">Source Code</a></li>
+                            <li><a href={`${repoUrl}/issues`} target="_blank" rel="noreferrer">Issues</a></li>
+                            <li><a href={`${repoUrl}/commits/main`} target="_blank" rel="noreferrer">Changelog</a></li>
+                            <li><a href={`${repoUrl}/blob/main/LICENSE`} target="_blank" rel="noreferrer">License</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,10 +53,9 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} ModIntel. All rights reserved.</p>
                     <div className="social-links">
-                        <a href="#"><FaGithub size={20} /></a>
-                        <a href="#"><FaXTwitter size={20} /></a>
-                        <a href="#"><FaLinkedin size={20} /></a>
-                        <a href="#"><FaDiscord size={20} /></a>
+                        <a href={repoUrl} target="_blank" rel="noreferrer" aria-label="ModIntel on GitHub">
+                            <FaGithub size={20} />
+                        </a>
                     </div>
                 </div>
             </div>
