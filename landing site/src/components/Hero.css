@@ -103,3 +103,13 @@
     transform: translateX(-50%);
     text-align: left;
 }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h1 br {
+        display: none;
+    }
+}
