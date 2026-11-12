@@ -58,22 +58,29 @@
 }
 
 .btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
     padding: 14px 28px;
-    background: var(--gradient-main);
+    background: var(--primary-orange);
     border-radius: 8px;
     color: white;
     font-weight: 600;
     box-shadow: 0 4px 20px rgba(255, 87, 10, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 .btn-hero:hover {
+    background: var(--primary-orange-hover);
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(255, 87, 10, 0.4);
 }
 
 .btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
     padding: 14px 28px;
     background: rgba(255, 255, 255, 0.05);
