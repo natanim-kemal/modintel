@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 600px;
+    height: 660px;
     overflow: hidden;
     isolation: isolate;
     background: var(--rf-panel);
@@ -40,8 +40,8 @@
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     flex: none;
-    height: 48px;
-    padding: 0 20px;
+    height: 54px;
+    padding: 0 24px;
     border-bottom: 1px solid var(--rf-border);
     background: rgba(255, 255, 255, 0.02);
 }
@@ -78,9 +78,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 11px;
+    padding: 0 14px;
     border-left: 1px solid var(--rf-border);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--rf-muted);
     white-space: nowrap;
@@ -109,9 +109,9 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
     min-height: 0;
-    padding: 18px 20px 20px;
+    padding: 24px 26px 26px;
 }
 
 .rf-toolbar {
@@ -119,6 +119,7 @@
     align-items: center;
     gap: 20px;
     flex: none;
+    padding: 12px 0;
 }
 
 .rf-stats {
@@ -135,16 +136,16 @@
 }
 
 .rf-stat > span {
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--rf-dim);
 }
 
 .rf-stat b {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 19px;
+    font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--rf-text);
 }
@@ -165,10 +166,10 @@
 .rf-scenario {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     min-width: 0;
-    height: 46px;
-    padding: 0 16px;
+    height: 36px;
+    padding: 0 12px;
     border: 1px solid var(--rf-border);
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.02);
@@ -184,7 +185,7 @@
 
 .rf-scenario.is-active {
     border-color: var(--rf-accent);
-    background: var(--rf-accent);
+    background: rgba(255, 87, 10, 0.06);
 }
 
 .rf-scenario:focus-visible {
@@ -194,7 +195,7 @@
 
 .rf-scenario-label {
     overflow: hidden;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--rf-text);
     text-overflow: ellipsis;
@@ -211,22 +212,13 @@
 
 .rf-scenario-verdict {
     flex: none;
-    margin-left: 3px;
-    font-size: 10px;
+    margin-left: 2px;
+    font-size: 9px;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--rf-verdict);
     white-space: nowrap;
-}
-
-.rf-scenario.is-active .rf-scenario-verdict {
-    color: rgba(255, 255, 255, 0.72);
-}
-
-.rf-scenario.is-active .rf-scenario-label,
-.rf-scenario.is-active .rf-scenario-short {
-    color: #ffffff;
 }
 
 .rf-flow {
@@ -256,10 +248,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     min-width: 0;
     min-height: 150px;
-    padding: 14px 16px;
+    padding: 16px 18px;
     border: 1px solid var(--rf-border);
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.022);
@@ -297,16 +289,16 @@
 }
 
 .rf-stage-kicker {
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--rf-muted);
 }
 
 .rf-stage-title {
     margin-top: auto;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.01em;
     color: var(--rf-text);
@@ -327,7 +319,7 @@
     border-radius: 2px;
     background: rgba(255, 87, 10, 0.08);
     font-family: var(--font-mono);
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 1.5;
     color: var(--rf-accent);
 }
@@ -336,7 +328,7 @@
     display: -webkit-box;
     overflow: hidden;
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 11.5px;
     line-height: 1.5;
     color: var(--rf-text);
     word-break: break-all;
@@ -357,7 +349,7 @@
     border-radius: 2px;
     background: #1e1b27;
     font-family: var(--font-mono);
-    font-size: 9.5px;
+    font-size: 10px;
     line-height: 1.7;
     color: #e6e1ec;
 }
@@ -374,7 +366,7 @@
 
 .rf-no-match {
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--rf-muted);
 }
 
@@ -384,7 +376,7 @@
     gap: 7px;
     margin-top: auto;
     overflow: hidden;
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -393,7 +385,7 @@
 }
 
 .rf-stage-foot b {
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0;
     color: var(--rf-text);
@@ -407,7 +399,7 @@
 }
 
 .rf-ml-prob {
-    font-size: 29px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -415,7 +407,7 @@
 }
 
 .rf-ml-label {
-    font-size: 9px;
+    font-size: 10.5px;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -450,7 +442,7 @@
 }
 
 .rf-skip small {
-    font-size: 10px;
+    font-size: 10.5px;
     letter-spacing: 0.03em;
     color: var(--rf-dim);
 }
@@ -470,7 +462,7 @@
 }
 
 .rf-verdict b {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.06em;
@@ -522,18 +514,18 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    min-height: 24px;
+    min-height: 26px;
     padding-left: 10px;
     border-left: 2px solid var(--rf-accent);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--rf-muted);
 }
 
 .rf-detail-key {
     flex: none;
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--rf-accent);
     white-space: nowrap;
@@ -548,21 +540,21 @@
 
 .rf-feed {
     flex: none;
-    padding-top: 12px;
+    padding-top: 20px;
     border-top: 1px solid var(--rf-border);
 }
 
 .rf-feed-head {
     display: flex;
     align-items: center;
-    min-height: 22px;
-    margin-bottom: 4px;
+    min-height: 24px;
+    margin-bottom: 6px;
 }
 
 .rf-feed-title {
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--rf-muted);
     white-space: nowrap;
@@ -582,9 +574,9 @@
 }
 
 .rf-row-head {
-    height: 24px;
+    height: 26px;
     border-bottom: 1px solid var(--rf-border);
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -592,11 +584,11 @@
 }
 
 .rf-row-event {
-    min-height: 44px;
+    min-height: 46px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(255, 255, 255, 0.014);
     box-shadow: inset 2px 0 0 var(--rf-verdict);
-    font-size: 11.5px;
+    font-size: 12px;
     color: #d8d2e2;
     animation: rf-row-in 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
     transition: background-color 0.25s;
@@ -632,7 +624,7 @@
     display: block;
     overflow: hidden;
     font-family: var(--font-mono);
-    font-size: 10.5px;
+    font-size: 11.5px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -650,7 +642,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     color: var(--rf-text);
     font-family: var(--font-mono);
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 1.5;
     word-break: break-all;
     opacity: 0;
@@ -674,7 +666,7 @@
 
 .rf-row-event .rf-rule {
     padding: 0 5px;
-    font-size: 9.5px;
+    font-size: 10px;
 }
 
 .rf-cell-ai {
@@ -705,7 +697,7 @@
     display: inline-flex;
     align-items: center;
     min-width: 56px;
-    font-size: 9.5px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -744,9 +736,9 @@
     }
 
     .rf-chrome {
-        height: 40px;
+        height: 48px;
         gap: 10px;
-        padding: 0 12px;
+        padding: 0 14px;
     }
 
     .rf-brand {
@@ -758,14 +750,15 @@
     }
 
     .rf-body {
-        gap: 10px;
-        padding: 12px;
+        gap: 18px;
+        padding: 20px 16px;
     }
 
     .rf-toolbar {
         flex-direction: column;
         align-items: stretch;
-        gap: 10px;
+        gap: 14px;
+        padding: 12px 0;
     }
 
     .rf-stats {
@@ -778,7 +771,7 @@
     }
 
     .rf-stat > span {
-        font-size: 8.5px;
+        font-size: 10px;
     }
 
     .rf-stat b {
@@ -792,7 +785,7 @@
     .rf-scenarios {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 6px;
+        gap: 8px;
         margin-left: 0;
     }
 
@@ -809,7 +802,7 @@
 
     .rf-scenario-short {
         display: inline;
-        font-size: 11px;
+        font-size: 11.5px;
     }
 
     .rf-stages {
@@ -817,7 +810,7 @@
     }
 
     .rf-link {
-        height: 20px;
+        height: 26px;
     }
 
     .rf-link svg {
@@ -826,14 +819,18 @@
         transform: rotate(90deg);
     }
 
+    .rf-flow {
+        gap: 16px;
+    }
+
     .rf-stage {
         min-height: 0;
-        gap: 7px;
-        padding: 11px 12px;
+        gap: 11px;
+        padding: 16px 14px;
     }
 
     .rf-stage-kicker {
-        font-size: 9px;
+        font-size: 9.5px;
     }
 
     .rf-stage-title {
@@ -841,16 +838,16 @@
     }
 
     .rf-path {
-        font-size: 10.5px;
+        font-size: 11px;
         -webkit-line-clamp: 2;
     }
 
     .rf-rule {
-        font-size: 9px;
+        font-size: 9.5px;
     }
 
     .rf-stage-foot {
-        font-size: 8.5px;
+        font-size: 9.5px;
     }
 
     .rf-stage-foot b {
@@ -858,22 +855,22 @@
     }
 
     .rf-ml-prob {
-        font-size: 24px;
+        font-size: 13px;
     }
 
     .rf-verdict {
-        margin: 2px 0;
+        margin: 4px 0;
     }
 
     .rf-verdict b {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .rf-detail {
         align-items: flex-start;
         min-height: 26px;
-        padding: 2px 0 2px 9px;
-        font-size: 9.5px;
+        padding: 4px 0 4px 9px;
+        font-size: 10.5px;
         white-space: normal;
     }
 
