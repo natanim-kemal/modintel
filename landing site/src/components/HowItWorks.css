@@ -40,18 +40,18 @@
     right: 40px;
     height: 2px;
     background: linear-gradient(90deg,
-            rgba(255, 255, 255, 0.1) 0%,
+            var(--pipeline-line) 0%,
             var(--primary-orange) 50%,
-            rgba(255, 255, 255, 0.1) 100%);
+            var(--pipeline-line) 100%);
     z-index: 0;
 }
 
 .step-card {
     flex: 1;
-    background: rgba(19, 17, 26, 0.6);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
@@ -127,9 +127,9 @@
         height: auto;
         transform: translateX(-50%);
         background: linear-gradient(180deg,
-                rgba(255, 255, 255, 0.1) 0%,
+                var(--pipeline-line) 0%,
                 var(--primary-orange) 50%,
-                rgba(255, 255, 255, 0.1) 100%);
+                var(--pipeline-line) 100%);
     }
 
     .step-card {
