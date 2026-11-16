@@ -1,5 +1,5 @@
 .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-subtle);
     padding: 80px 0 40px;
     background: var(--bg-dark-accent);
     color: var(--text-gray);
@@ -59,7 +59,7 @@
 
 .footer-bottom {
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-subtle);
     display: flex;
     justify-content: space-between;
     align-items: center;
