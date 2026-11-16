@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -17,6 +18,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="nav-actions">
+                    <ThemeToggle />
                     <a href="https://github.com/modintel/modintel" className="btn-primary" target="_blank" rel="noreferrer">Get Started</a>
                 </div>
             </div>
