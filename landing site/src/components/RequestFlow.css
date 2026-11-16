@@ -1,10 +1,4 @@
 .request-flow {
-    --rf-border: rgba(255, 255, 255, 0.08);
-    --rf-panel: #0d0c12;
-    --rf-text: #f4f1f8;
-    --rf-muted: #a49eb1;
-    --rf-dim: #6f697c;
-    --rf-accent: #ff570a;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,24 +9,26 @@
     background: var(--rf-panel);
     border: 1px solid var(--rf-border);
     border-radius: 4px;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     text-align: left;
     color: var(--rf-text);
 }
 
 .verdict-blocked {
-    --rf-verdict: #ff570a;
-    --rf-verdict-soft: rgba(255, 87, 10, 0.12);
+    --rf-verdict: var(--primary-orange);
+    --rf-verdict-soft: var(--rf-soft-blocked);
 }
 
 .verdict-review {
-    --rf-verdict: #d8d2e2;
-    --rf-verdict-soft: rgba(255, 255, 255, 0.06);
+    --rf-verdict: var(--rf-verdict-review);
+    --rf-verdict-soft: var(--rf-soft-review);
 }
 
 .verdict-allowed {
-    --rf-verdict: #8f899c;
-    --rf-verdict-soft: rgba(255, 255, 255, 0.035);
+    --rf-verdict: var(--rf-verdict-allowed);
+    --rf-verdict-soft: var(--rf-soft-allowed);
 }
 
 .rf-chrome {
@@ -43,7 +39,7 @@
     height: 54px;
     padding: 0 24px;
     border-bottom: 1px solid var(--rf-border);
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--surface-1);
 }
 
 .rf-brand {
@@ -172,7 +168,7 @@
     padding: 0 12px;
     border: 1px solid var(--rf-border);
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--surface-1);
     color: var(--rf-muted);
     text-align: left;
     transition: border-color 0.15s, background-color 0.15s, color 0.15s;
@@ -254,7 +250,7 @@
     padding: 16px 18px;
     border: 1px solid var(--rf-border);
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.022);
+    background: var(--surface-1);
     transition: opacity 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
@@ -345,13 +341,13 @@
 
 .rf-rule {
     padding: 0 5px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
     border-radius: 2px;
-    background: #1e1b27;
+    background: var(--rf-chip-bg);
     font-family: var(--font-mono);
     font-size: 10px;
     line-height: 1.7;
-    color: #e6e1ec;
+    color: var(--rf-chip-text);
 }
 
 .rf-rule-more {
@@ -417,7 +413,7 @@
 .rf-meter {
     overflow: hidden;
     height: 3px;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--border);
 }
 
 .rf-meter span {
@@ -485,7 +481,7 @@
 .rf-link-line,
 .rf-link-arrow {
     fill: none;
-    stroke: rgba(255, 255, 255, 0.18);
+    stroke: var(--rf-link-stroke);
     stroke-width: 1;
 }
 
@@ -580,22 +576,22 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.38);
+    color: var(--rf-dim);
 }
 
 .rf-row-event {
     min-height: 46px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(255, 255, 255, 0.014);
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--surface-1);
     box-shadow: inset 2px 0 0 var(--rf-verdict);
     font-size: 12px;
-    color: #d8d2e2;
+    color: var(--rf-row-text);
     animation: rf-row-in 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
     transition: background-color 0.25s;
 }
 
 .rf-row-event:hover {
-    background: rgba(255, 255, 255, 0.035);
+    background: var(--surface-2);
 }
 
 .rf-row-event.is-settled {
@@ -638,7 +634,7 @@
     padding: 7px 9px;
     border: 1px solid rgba(255, 87, 10, 0.4);
     border-radius: 2px;
-    background: #17141f;
+    background: var(--rf-pop-bg);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     color: var(--rf-text);
     font-family: var(--font-mono);
@@ -684,7 +680,7 @@
 }
 
 .rf-p2 {
-    color: #d8d2e2;
+    color: var(--rf-row-text);
     font-weight: 600;
 }
 
