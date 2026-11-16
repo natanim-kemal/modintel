@@ -2,6 +2,8 @@
 
 :root {
   font-size: 85%;
+  color-scheme: dark;
+
   /* Colors */
   --bg-dark: #09080c;
   --bg-dark-accent: #13111a;
@@ -11,8 +13,41 @@
   --text-gray: #9ca3af;
   --text-dark: #000000;
 
+  --glass-bg: rgba(9, 8, 12, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-strong: rgba(19, 17, 26, 0.9);
+  --glass-strong-border: rgba(255, 255, 255, 0.15);
+  --surface-1: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --pipeline-line: rgba(255, 255, 255, 0.1);
+  --panel-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  --popover-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  --rf-border: var(--border);
+  --rf-panel: #0d0c12;
+  --rf-text: #f4f1f8;
+  --rf-muted: #a49eb1;
+  --rf-dim: #6f697c;
+  --rf-row-text: #d8d2e2;
+  --rf-chip-bg: #1e1b27;
+  --rf-chip-text: #e6e1ec;
+  --rf-pop-bg: #17141f;
+  --rf-link-stroke: rgba(255, 255, 255, 0.18);
+  --rf-accent: var(--primary-orange);
+  --rf-verdict-review: #d8d2e2;
+  --rf-verdict-allowed: #8f899c;
+  --rf-soft-blocked: rgba(255, 87, 10, 0.12);
+  --rf-soft-review: rgba(255, 255, 255, 0.06);
+  --rf-soft-allowed: rgba(255, 255, 255, 0.035);
+
   /* Glow */
   --gradient-glow: radial-gradient(circle at center, rgba(255, 87, 10, 0.15) 0%, rgba(9, 8, 12, 0) 70%);
+  --cta-panel: linear-gradient(180deg, rgba(255, 87, 10, 0.05) 0%, rgba(9, 8, 12, 0.4) 100%);
 
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
@@ -21,6 +56,51 @@
   /* Spacing */
   --container-width: 1280px;
   --nav-height: 80px;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-dark: #f6f7fb;
+  --bg-dark-accent: #eceff7;
+  --primary-orange: #e54708;
+  --primary-orange-hover: #ff570a;
+  --text-white: #16151d;
+  --text-gray: #605b6f;
+  --text-dark: #ffffff;
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(20, 19, 30, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.9);
+  --glass-strong-border: rgba(20, 19, 30, 0.14);
+  --surface-1: rgba(20, 19, 30, 0.028);
+  --surface-2: rgba(20, 19, 30, 0.045);
+  --surface-3: rgba(20, 19, 30, 0.075);
+  --border-subtle: rgba(20, 19, 30, 0.07);
+  --border: rgba(20, 19, 30, 0.12);
+  --border-strong: rgba(20, 19, 30, 0.22);
+  --grid-line: rgba(20, 19, 30, 0.045);
+  --pipeline-line: rgba(20, 19, 30, 0.1);
+  --panel-shadow: 0 24px 70px rgba(30, 27, 50, 0.14);
+  --popover-shadow: 0 10px 30px rgba(30, 27, 50, 0.16);
+
+  --rf-panel: rgba(255, 255, 255, 0.86);
+  --rf-text: #1d1b26;
+  --rf-muted: #635e73;
+  --rf-dim: #8f8a9c;
+  --rf-row-text: #3a3648;
+  --rf-chip-bg: #f0eff5;
+  --rf-chip-text: #4a4459;
+  --rf-pop-bg: #ffffff;
+  --rf-link-stroke: rgba(20, 19, 30, 0.2);
+  --rf-verdict-review: #635e73;
+  --rf-verdict-allowed: #8f8a9c;
+  --rf-soft-blocked: rgba(229, 71, 8, 0.08);
+  --rf-soft-review: rgba(20, 19, 30, 0.05);
+  --rf-soft-allowed: rgba(20, 19, 30, 0.03);
+
+  --gradient-glow: radial-gradient(circle at center, rgba(255, 87, 10, 0.12) 0%, rgba(246, 247, 251, 0) 70%);
+  --cta-panel: linear-gradient(180deg, rgba(229, 71, 8, 0.06) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 html {
@@ -42,6 +122,24 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   zoom: 0.9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='light'] body {
+  background-image:
+    radial-gradient(1100px 620px at 8% -12%, rgba(255, 255, 255, 0.95), transparent 62%),
+    radial-gradient(980px 620px at 92% 4%, rgba(255, 226, 209, 0.55), transparent 62%),
+    radial-gradient(900px 760px at 50% 112%, rgba(212, 227, 255, 0.6), transparent 60%);
+  background-attachment: fixed;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar::before,
+  .footer,
+  .cta-container,
+  .request-flow {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
 }
 
 a {
@@ -66,8 +164,8 @@ button {
   height: 100%;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 10px 10px;
   mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
   pointer-events: none;
