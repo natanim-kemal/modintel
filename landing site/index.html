@@ -5,15 +5,24 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <script>
-    (function () {
-      var saved;
-      try { saved = localStorage.getItem('modintel-theme'); } catch (e) {}
-      document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
-    })();
-  </script>
-  <title>ModIntel - AI Powered WAF</title>
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#ef4f10" />
+  <title>ModIntel: Security that reads between the requests</title>
+  <meta name="description"
+    content="An open-source hybrid WAF: Coraza and the OWASP Core Rule Set detect, a local model judges, and every verdict arrives with its evidence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ModIntel: Security that reads between the requests" />
+  <meta property="og:description"
+    content="Coraza's rules, a local ML judge, and a dashboard that explains every decision. Payloads never leave your infrastructure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
