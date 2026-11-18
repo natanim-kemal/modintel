@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import './SettingsPage.css';
 
-const API_KEY = 'mi_live_9f2c7a1d84b34e6ba91c5f0d2e47a13b';
-const API_KEY_MASK = 'mi_live_************************a13b';
+const API_KEY = 'example-key-not-a-real-secret';
+const API_KEY_MASK = 'example-key-****************';
 
 const SECTIONS = [
   { id: 'detection', label: 'Detection', keys: ['block', 'autoClear', 'l2Miss', 'payloads'] },
