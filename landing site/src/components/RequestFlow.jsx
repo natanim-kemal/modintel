@@ -34,7 +34,7 @@ const SCENARIOS = [
         shortLabel: 'XSS',
         method: 'GET',
         path: '/rest/products/search?q=%253Cscript%253Ealert(1)%253C%2Fscript%253E',
-        score: '—',
+        score: '-',
         rules: [],
         extraRules: 0,
         ai: '94.4%',
@@ -295,10 +295,10 @@ const RequestFlow = () => {
             ? { key: 'Event appended', text: `${scenario.verdictLabel} · ${scenario.path}` }
             : stageDetails[shownPhase];
 
-    const scoreShown = shownPhase >= 1 ? scenario.score : '—';
-    const aiShown = shownPhase >= 2 ? scenario.ai : '—';
-    const confidenceShown = shownPhase >= 2 ? scenario.confidence : '—';
-    const priorityShown = shownPhase >= 1 ? scenario.priority : '—';
+    const scoreShown = shownPhase >= 1 ? scenario.score : '-';
+    const aiShown = shownPhase >= 2 ? scenario.ai : '-';
+    const confidenceShown = shownPhase >= 2 ? scenario.confidence : '-';
+    const priorityShown = shownPhase >= 1 ? scenario.priority : '-';
     const statusShown = shownPhase >= 3
         ? scenario.verdictLabel
         : shownPhase >= 2
@@ -532,7 +532,7 @@ const RequestFlow = () => {
                             <span className="rf-cell rf-cell-score" role="cell">{scoreShown}</span>
                             <span className="rf-cell rf-cell-rules" role="cell">
                                 {shownPhase < 1 ? (
-                                    <span className="rf-dim">—</span>
+                                    <span className="rf-dim">-</span>
                                 ) : scenario.rules.length ? (
                                     <>
                                         {scenario.rules.map((rule) => (
@@ -548,7 +548,7 @@ const RequestFlow = () => {
                             </span>
                             <span className="rf-cell rf-cell-ai" role="cell">{aiShown}</span>
                             <span className="rf-cell rf-cell-conf" role="cell">{confidenceShown}</span>
-                            <span className={`rf-cell rf-cell-priority${priorityShown === '—' ? '' : ` rf-${priorityShown.toLowerCase()}`}`} role="cell">{priorityShown}</span>
+                            <span className={`rf-cell rf-cell-priority${priorityShown === '-' ? '' : ` rf-${priorityShown.toLowerCase()}`}`} role="cell">{priorityShown}</span>
                             <span className="rf-cell" role="cell">
                                 <span className={`rf-status${shownPhase >= 3 ? ' is-final' : ' is-pending'}`}>{statusShown}</span>
                             </span>
