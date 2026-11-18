@@ -1,0 +1,60 @@
+.stack {
+  padding: 48px 0 96px;
+  background: #fff;
+  text-align: center;
+}
+
+.stack-label {
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+
+.stack-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px clamp(24px, 4vw, 54px);
+  margin-top: 26px;
+}
+
+.stack-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #1c1b19;
+  font-family: var(--display);
+  font-size: clamp(15px, 1.55vw, 19px);
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.stack-ico {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: #3a3833;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .stack {
+    padding: 48px 0 72px;
+  }
+
+  .stack-row {
+    max-width: 420px;
+    margin: 20px auto 0;
+    gap: 14px 22px;
+  }
+
+  .stack-ico {
+    width: 17px;
+    height: 17px;
+  }
+}
